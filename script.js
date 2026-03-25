@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function createFloatingHearts() {
     const container = document.getElementById('heartsContainer');
-    const hearts = ['💕', '💖', '💗', '💝', '💘', '✨', '🌟'];
+    const hearts = ['✨', '🌟', '🎯', '🔥', '⚡', '🎉', '😂'];
     
     setInterval(() => {
         if (document.querySelectorAll('.heart').length < 15) {
@@ -256,15 +256,16 @@ function initConfetti() {
     }
     
     // Also add some heart confetti
-    class HeartConfetti {
+    class EmojiConfetti {
         constructor() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height - canvas.height;
-            this.size = Math.random() * 20 + 15;
-            this.color = colors[Math.floor(Math.random() * colors.length)];
+            this.size = Math.random() * 25 + 20;
             this.speedY = Math.random() * 2 + 1;
             this.speedX = Math.random() * 2 - 1;
             this.opacity = Math.random() * 0.5 + 0.5;
+            this.emojis = ['😂', '🤣', '🐕', '🦴', '🎯', '🧬', '✨', '🎉'];
+            this.emoji = this.emojis[Math.floor(Math.random() * this.emojis.length)];
         }
         
         update() {
@@ -280,15 +281,14 @@ function initConfetti() {
         draw() {
             ctx.save();
             ctx.globalAlpha = this.opacity;
-            ctx.fillStyle = this.color;
             ctx.font = `${this.size}px Arial`;
-            ctx.fillText('💕', this.x, this.y);
+            ctx.fillText(this.emoji, this.x, this.y);
             ctx.restore();
         }
     }
     
-    for (let i = 0; i < 30; i++) {
-        confetti.push(new HeartConfetti());
+    for (let i = 0; i < 20; i++) {
+        confetti.push(new EmojiConfetti());
     }
     
     function animate() {
