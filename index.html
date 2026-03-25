@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personality Quiz 🎯</title>
+    <title>The Ultimate Personality Test 🧠</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Floating Fun Background -->
-    <div class="hearts-container" id="heartsContainer"></div>
+    <div class="fun-container" id="funContainer"></div>
 
     <!-- Page 1: Landing -->
     <div class="page active" id="landingPage">
         <div class="card">
-            <div class="emoji-float">✨</div>
-            <h1 class="gradient-text">Discover Your<br>True Personality!</h1>
-            <p class="subtitle">Take this fun 5-question quiz to reveal the real you 🎯</p>
+            <div class="emoji-float">🧪</div>
+            <h1 class="gradient-text">The Ultimate<br>Personality Test!</h1>
+            <p class="subtitle">5 questions. 1 truth. Find out who you really are! 🎯</p>
             <div class="features">
                 <span class="feature-tag">🎯 99% Accurate</span>
                 <span class="feature-tag">⚡ Instant Results</span>
-                <span class="feature-tag">💫 Fun & Free</span>
+                <span class="feature-tag">🔬 Scientific AF</span>
             </div>
             <button class="btn-primary" onclick="startQuiz()">
-                Start Quiz 🚀
+                Start Test 🚀
             </button>
         </div>
     </div>
@@ -45,9 +45,9 @@
     <!-- Page 3: Analyzing -->
     <div class="page" id="analyzingPage">
         <div class="card analyzing-card">
-            <div class="brain-emoji">🧠</div>
-            <h2>Analyzing Your Personality...</h2>
-            <div class="analysis-text" id="analysisText">Reading your aura...</div>
+            <div class="brain-emoji">🧬</div>
+            <h2>Running DNA Analysis...</h2>
+            <div class="analysis-text" id="analysisText">Scanning chromosomes...</div>
             <div class="loading-dots">
                 <span></span><span></span><span></span>
             </div>
@@ -65,16 +65,16 @@
     <div class="page" id="revealPage">
         <canvas id="confettiCanvas"></canvas>
         <div class="reveal-content">
-            <div class="reveal-badge">🎉 RESULTS ARE IN 🎉</div>
+            <div class="reveal-badge">⚠️ TEST COMPLETE ⚠️</div>
             <h1 class="reveal-title">We Found It!</h1>
-            <p class="reveal-subtitle">After deep analysis of your personality...</p>
+            <p class="reveal-subtitle">After analyzing your DNA structure...</p>
             <div class="gif-container">
                 <img id="takluGif" src="taklu.gif" alt="Taklu Dog" />
             </div>
-            <div class="taklu-text">TAKLU!! 😂</div>
-            <p class="reveal-message">DNA Test Confirmed: 100% Taklu! 🧬😆</p>
+            <div class="taklu-text">TAKLU!! 🐕</div>
+            <p class="reveal-message">Official Result: 100% Certified Taklu! 🧬😂</p>
             <button class="btn-secondary" onclick="location.reload()">
-                Play Again 🔄
+                Test Again 🔄
             </button>
         </div>
     </div>

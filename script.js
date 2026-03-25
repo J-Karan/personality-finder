@@ -1,86 +1,86 @@
 // Quiz Data
 const questions = [
     {
-        question: "What's your favorite way to spend a weekend?",
+        question: "What's your favorite way to annoy your sibling?",
         options: [
-            { emoji: "🛋️", text: "Cozy movie marathon" },
-            { emoji: "🌟", text: "Adventure & exploring" },
-            { emoji: "🍕", text: "Trying new food spots" },
-            { emoji: "🎨", text: "Creative projects" }
+            { emoji: "🍕", text: "Eating their food secretly" },
+            { emoji: "📱", text: "Taking their phone charger" },
+            { emoji: "🚪", text: "Not closing their room door" },
+            { emoji: "📺", text: "Changing the TV channel" }
         ]
     },
     {
         question: "Pick your spirit animal:",
         options: [
-            { emoji: "🐱", text: "Cat - Independent & curious" },
-            { emoji: "🐶", text: "Dog - Loyal & playful" },
-            { emoji: "🦋", text: "Butterfly - Free & colorful" },
-            { emoji: "🐼", text: "Panda - Chill & adorable" }
+            { emoji: "🐕", text: "Dog - Loyal but chaotic" },
+            { emoji: "🐒", text: "Monkey - Mischievous" },
+            { emoji: "🦥", text: "Sloth - Lazy legend" },
+            { emoji: "🦖", text: "Dinosaur - Roars for no reason" }
         ]
     },
     {
-        question: "Your friends would describe you as:",
+        question: "Your sibling would describe you as:",
         options: [
-            { emoji: "😂", text: "The funny one" },
-            { emoji: "💝", text: "The caring one" },
-            { emoji: "🤓", text: "The smart one" },
-            { emoji: "✨", text: "The unique one" }
+            { emoji: "😈", text: "The annoying one" },
+            { emoji: "🍜", text: "The food thief" },
+            { emoji: "💤", text: "The sleepy head" },
+            { emoji: "🤪", text: "The weird one" }
         ]
     },
     {
-        question: "What's your superpower?",
+        question: "What's your hidden talent?",
         options: [
-            { emoji: "🦸", text: "Making people smile" },
-            { emoji: "🧠", text: "Solving any problem" },
-            { emoji: "💫", text: "Spreading positivity" },
-            { emoji: "🎭", text: "Being unpredictable" }
+            { emoji: "👻", text: "Disappearing when chores appear" },
+            { emoji: "🍽️", text: "Finishing all the snacks" },
+            { emoji: "💭", text: "Talking nonsense for hours" },
+            { emoji: "🎭", text: "Dramatic reactions to everything" }
         ]
     },
     {
-        question: "Choose a color vibe:",
+        question: "Choose your life motto:",
         options: [
-            { emoji: "💗", text: "Pink - Sweet & dreamy" },
-            { emoji: "💜", text: "Purple - Mysterious & royal" },
-            { emoji: "💛", text: "Yellow - Sunny & bright" },
-            { emoji: "🌈", text: "Rainbow - All the vibes!" }
+            { emoji: "🍕", text: "Food > Everything" },
+            { emoji: "💤", text: "Sleep is life" },
+            { emoji: "📱", text: "Scroll now, regret later" },
+            { emoji: "🤷", text: "I didn't choose the taklu life" }
         ]
     }
 ];
 
 // Analysis messages
 const analysisMessages = [
-    "Reading your aura...",
-    "Calculating cuteness level...",
-    "Scanning personality matrix...",
-    "Analyzing your choices...",
-    "Consulting the stars...",
-    "Measuring awesome-ness...",
-    "Detecting hidden traits...",
-    "Finalizing results..."
+    "Scanning DNA strands...",
+    "Detecting taklu genes...",
+    "Analyzing weird behavior...",
+    "Measuring chaos level...",
+    "Consulting the taklu database...",
+    "Checking snack theft history...",
+    "Calculating annoyance factor...",
+    "Finalizing test results..."
 ];
 
 let currentQuestion = 0;
 
-// Initialize floating hearts
+// Initialize floating fun elements
 document.addEventListener('DOMContentLoaded', () => {
-    createFloatingHearts();
+    createFloatingFun();
 });
 
-function createFloatingHearts() {
-    const container = document.getElementById('heartsContainer');
-    const hearts = ['✨', '🌟', '🎯', '🔥', '⚡', '🎉', '😂'];
+function createFloatingFun() {
+    const container = document.getElementById('funContainer');
+    const emojis = ['✨', '🌟', '🎯', '🔥', '⚡', '🎉', '😂', '🐕', '🦴', '🧬'];
     
     setInterval(() => {
-        if (document.querySelectorAll('.heart').length < 15) {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
-            heart.style.left = Math.random() * 100 + '%';
-            heart.style.animationDuration = (Math.random() * 5 + 8) + 's';
-            heart.style.fontSize = (Math.random() * 15 + 15) + 'px';
-            container.appendChild(heart);
+        if (document.querySelectorAll('.fun-emoji').length < 15) {
+            const emoji = document.createElement('div');
+            emoji.className = 'fun-emoji';
+            emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            emoji.style.left = Math.random() * 100 + '%';
+            emoji.style.animationDuration = (Math.random() * 5 + 8) + 's';
+            emoji.style.fontSize = (Math.random() * 15 + 15) + 'px';
+            container.appendChild(emoji);
             
-            setTimeout(() => heart.remove(), 13000);
+            setTimeout(() => emoji.remove(), 13000);
         }
     }, 1500);
 }
@@ -255,7 +255,7 @@ function initConfetti() {
         confetti.push(new Confetti());
     }
     
-    // Also add some heart confetti
+    // Also add some emoji confetti
     class EmojiConfetti {
         constructor() {
             this.x = Math.random() * canvas.width;
@@ -264,7 +264,7 @@ function initConfetti() {
             this.speedY = Math.random() * 2 + 1;
             this.speedX = Math.random() * 2 - 1;
             this.opacity = Math.random() * 0.5 + 0.5;
-            this.emojis = ['😂', '🤣', '🐕', '🦴', '🎯', '🧬', '✨', '🎉'];
+            this.emojis = ['😂', '🤣', '🐕', '🦴', '🎯', '🧬', '✨', '🎉', '🐶'];
             this.emoji = this.emojis[Math.floor(Math.random() * this.emojis.length)];
         }
         
