@@ -407,7 +407,7 @@ body {
     margin-bottom: 30px;
 }
 
-.video-container {
+.gif-container {
     background: white;
     padding: 15px;
     border-radius: 20px;
@@ -427,14 +427,17 @@ body {
     }
 }
 
-.video-container video {
+.gif-container img {
     width: 100%;
     max-width: 400px;
     border-radius: 12px;
     display: block;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s ease;
 }
 
-.bhondu-text {
+.taklu-text {
     font-size: 4rem;
     font-weight: 800;
     color: white;

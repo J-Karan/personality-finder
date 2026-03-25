@@ -188,16 +188,12 @@ function showReveal() {
     // Start confetti
     initConfetti();
     
-    // Play video with sound after a short delay
+    // Show the GIF with animation
     setTimeout(() => {
-        const video = document.getElementById('bhonduVideo');
-        video.muted = false;
-        video.play().catch(e => {
-            // Autoplay with sound might be blocked, keep muted
-            video.muted = true;
-            video.play();
-        });
-    }, 500);
+        const gif = document.getElementById('takluGif');
+        gif.style.opacity = '1';
+        gif.style.transform = 'scale(1)';
+    }, 300);
 }
 
 // Confetti System
