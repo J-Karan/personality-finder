@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Quiz 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Page 1: Landing -->
+    <div class="page active" id="landingPage">
+        <div class="card">
+            <div class="emoji-float">✨</div>
+            <h1 class="gradient-text">Discover Your<br>True Personality!</h1>
+            <p class="subtitle">Take this fun 5-question quiz to reveal the real you 💝</p>
+            <div class="features">
+                <span class="feature-tag">🎯 99% Accurate</span>
+                <span class="feature-tag">⚡ Instant Results</span>
+                <span class="feature-tag">💫 Fun & Free</span>
+            </div>
+            <button class="btn-primary" onclick="startQuiz()">
+                Start Quiz 🚀
+            </button>
+        </div>
+    </div>
+
+    <!-- Page 2: Quiz Questions -->
+    <div class="page" id="quizPage">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="card quiz-card">
+            <div class="question-number" id="questionNumber">Question 1/5</div>
+            <h2 id="questionText">What's your favorite way to spend a weekend?</h2>
+            <div class="options" id="optionsContainer">
+                <!-- Options injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: Analyzing -->
+    <div class="page" id="analyzingPage">
+        <div class="card analyzing-card">
+            <div class="brain-emoji">🧠</div>
+            <h2>Analyzing Your Personality...</h2>
+            <div class="analysis-text" id="analysisText">Reading your aura...</div>
+            <div class="loading-dots">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="progress-ring">
+                <svg viewBox="0 0 100 100">
+                    <circle class="progress-ring-bg" cx="50" cy="50" r="45"/>
+                    <circle class="progress-ring-fill" id="progressRing" cx="50" cy="50" r="45"/>
+                </svg>
+                <div class="progress-text" id="progressText">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: The Reveal (Bhondu!) -->
+    <div class="page" id="revealPage">
+        <canvas id="confettiCanvas"></canvas>
+        <div class="reveal-content">
+            <div class="reveal-badge">🎉 RESULT READY 🎉</div>
+            <h1 class="reveal-title">We Found It!</h1>
+            <p class="reveal-subtitle">After deep analysis of your personality...</p>
+            <div class="video-container">
+                <video id="bhonduVideo" autoplay loop muted playsinline>
+                    <source src="bhondu.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="bhondu-text">BHONDU!! 💕</div>
+            <p class="reveal-message">You're officially the cutest Bhondu ever! 😘</p>
+            <button class="btn-secondary" onclick="location.reload()">
+                Play Again 🔄
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
